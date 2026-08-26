@@ -22,11 +22,7 @@ pipeline {
             }
         }
     }
-<<<<<<< HEAD
     
 
-    
-=======
-    // Testing pt 2
->>>>>>> main
+// Testing 4 n
 }
