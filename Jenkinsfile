@@ -12,11 +12,8 @@ pipeline {
             }
         }
         stage('Test') {
-            agent {
-                docker { image 'maven:3.9-eclipse-temurin-21' }
-            }
             steps {
-                sh 'mvn -B test'
+                sh 'docker run --rm -v "$PWD":/src -w /src maven:3.9-eclipse-temurin-21 mvn -B test'
             }
             post {
                 always {
